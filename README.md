@@ -25,7 +25,7 @@ A dynamic web platform designed to serve as a repository for prompts, facilitati
 
 # Purpose & Objective:
 
-  - Showcase Skillset: This project is a testament to the creator's comprehensive skill set, from frontend design to backend logic and database management. It serves as a live portfolio piece for potential employers.
+  - Showcase Skillset: This project is a testament to my comprehensive skill set, from frontend design to backend logic and database management. It serves as a live portfolio piece for potential employers.
   - Centralized Hub: It offers a space for the creator and their peers to house, share, and discuss prompts.
 
 Please use the platform and provide feedback, help the continuous improvement.
