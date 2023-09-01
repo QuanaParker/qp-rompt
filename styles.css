@@ -1,0 +1,373 @@
+body, html {
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #434654; /* Lighter dark background for the entire page */
+    color: #f0f0f0; /* Slightly lighter text color */
+}
+html.light-mode {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #d7d7d7; /* Lighter background for the entire page */
+    color: #333333; /* Slightly Darker text color */
+}
+body.light-mode {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #d7d7d7; /* Lighter background for the entire page */
+    color: #333333; /* Slightly Darker text color */
+}
+
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+.navbar {
+    background-color: #343540;
+    width: 80%; /* Set the width of the navbar to 80% of the viewport */
+    position: fixed;
+    top: 0;
+    left: 10%; /* Centers the navbar */
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+    border-bottom-left-radius: 10px; /* Rounded corner on the bottom left */
+    border-bottom-right-radius: 10px; /* Rounded corner on the bottom right */
+    transition: color 0.3s;
+}
+.light-mode .navbar {
+    background-color: #E0E0E0;
+    width: 80%; /* Set the width of the navbar to 80% of the viewport */
+    position: fixed;
+    top: 0;
+    left: 10%; /* Centers the navbar */
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+    border-bottom-left-radius: 10px; /* Rounded corner on the bottom left */
+    border-bottom-right-radius: 10px; /* Rounded corner on the bottom right */
+    transition: color 0.3s;
+}
+
+.nav-container {
+    width: 100%; /* Set to full width of its parent, the .navbar */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 0;
+}
+.light-mode .nav-container {
+    width: 100%; /* Set to full width of its parent, the .navbar */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 0;
+}
+
+.nav-logo {
+    color: #D1D5DB;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding-left: 20px;
+    transition: color 0.3s;
+}
+.light-mode .nav-logo {
+    color: #393939;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding-left: 20px;
+    transition: color 0.3s;
+}
+
+.nav-menu {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+.light-mode .nav-menu {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-menu li a {
+    color: #D1D5DB;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    transition: color 0.3s;
+}
+.light-mode .nav-menu li a {
+    color: #3b3b3b;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    transition: color 0.3s;
+}
+
+.nav-menu li a:hover {
+    background-color: #3D3F4A; /* Slightly lighter tone on hover */
+}
+.light-mode .nav-menu li a:hover {
+    background-color: #b7b7b7; /* Slightly darker tone on hover */
+}
+
+.container {
+    display: flex;
+    height: calc(100% - 85px); /* Adjusted for the navbar height */
+    max-width: 80%;
+    margin: 85px auto 0; /* 60px top margin to push content below the navbar */
+}
+.light-mode .container {
+    display: flex;
+    height: calc(100% - 85px); /* Adjusted for the navbar height */
+    max-width: 80%;
+    margin: 85px auto 0; /* 60px top margin to push content below the navbar */
+}
+
+.sidebar {
+    width: 20%;
+    height: calc(100% - 85px); /* Adjusted for the navbar height */
+    margin: 10px auto 0; /* 60px top margin to push content below the navbar */
+    background-color: #404150; /* Darker shade for sidebar */
+    padding: 1em;
+    overflow-y: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Slightly more prominent shadow */
+    transition: color 0.3s;
+}
+.light-mode .sidebar {
+    height: calc(100% - 85px); /* Adjusted for the navbar height */
+    margin: 10px auto 0; /* 60px top margin to push content below the navbar */
+    background-color: #b9bac1; /* Darker shade for sidebar */
+    padding: 1em;
+    overflow-y: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Slightly more prominent shadow */
+    transition: color 0.3s;
+}
+
+.breadcrumb {
+    font-size: 0.9em;
+    margin: 10px 0;
+    padding: 5px 0; /* Adjust for desired height */
+    background-color: transparent;
+    color: #f0f0f0;
+}
+.light-mode .breadcrumb {
+    color: #727272;
+}
+
+.breadcrumb a {
+    color: #f0f0f0;
+    text-decoration: none;
+    padding: 0 5px; /* Padding for spacing and clickable area */
+    transition: color 0.3s;
+}
+.light-mode .breadcrumb a {
+    color: #727272;
+    transition: color 0.3s;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline; /* Or change color for hover effect */
+}
+
+.breadcrumb span {
+    color: #D1D5DB; /* Slightly lighter color for the current location */
+    padding: 0 5px;
+    transition: color 0.3s;
+}
+.light-mode .breadcrumb span {
+    color: #7b7b7b; /* Slightly lighter color for the current location */
+    transition: color 0.3s;
+}
+
+
+.content {
+    width: 80%;
+    padding: 1em;
+    overflow-y: auto;
+}
+.light-mode .content {
+    padding: 1em;
+    overflow-y: auto;
+}
+
+.result-box {
+    background-color: #404150; /* Darker shade for the result box */
+    border-radius: 8px;
+    margin-bottom: 1em;
+    margin-left: auto; /* Pushes the box to the right */
+    padding: 1em;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Slightly more prominent shadow */
+    transition: color 0.3s;
+}
+.light-mode .result-box {
+    background-color: #c8c9d1; /* Darker shade for the result box */
+    border-radius: 8px;
+    margin-bottom: 1em;
+    margin-left: auto; /* Pushes the box to the right */
+    padding: 1em;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Slightly more prominent shadow */
+    transition: color 0.3s;
+}
+
+.result-title {
+    margin-top: 0;
+}
+.light-mode .result-title {
+    margin-top: 0;
+}
+
+.info-bar {
+    display: flex;
+    justify-content: right;
+    margin-top: 1em;
+    font-size: 0.9em;
+}
+.light-mode .info-bar {
+    display: flex;
+    justify-content: right;
+    margin-top: 1em;
+    font-size: 0.9em;
+}
+
+.info-bar > * {
+    padding-right: 0.5em;
+    padding-left: 0.5em;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar, .content {
+        width: 100%;
+    }
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.pagination a {
+    color: #f0f0f0;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #555;
+    margin: 0 4px;
+    transition: color 0.3s;
+}
+
+.pagination a.active {
+    background-color: #555;
+    color: white;
+    border: 1px solid #555;
+}
+
+.pagination a:hover:not(.active) {
+    background-color: #ddd;
+    color: #555;
+}
+
+
+.footer {
+    background-color: #343540; 
+    padding: 1em 0;
+    width: 80%; /* Set the width of the footer to 80% of the viewport */
+    margin: 2em auto 0; /* Center the footer and give a top margin for spacing */
+    border-top-left-radius: 10px; /* Rounded corner on the top left */
+    border-top-right-radius: 10px; /* Rounded corner on the top right */
+    transition: color 0.3s;
+}
+.light-mode .footer {
+    background-color: #E0E0E0; 
+    padding: 1em 0;
+    width: 80%; /* Set the width of the footer to 80% of the viewport */
+    margin: 2em auto 0; /* Center the footer and give a top margin for spacing */
+    border-top-left-radius: 10px; /* Rounded corner on the top left */
+    border-top-right-radius: 10px; /* Rounded corner on the top right */
+    transition: color 0.3s;
+}
+
+.footer-container {
+/*    max-width: 80%; */
+    width: 100%; /* Set to full width of its parent, the .footer */
+    margin: 0 auto;
+    text-align: center; /* Center the footer content */
+    color: #8C8DA0;
+}
+.light-mode .footer-container {
+    /*    max-width: 80%; */
+        width: 100%; /* Set to full width of its parent, the .footer */
+        margin: 0 auto;
+        text-align: center; /* Center the footer content */
+        color: #6c6d7c;
+    }
+    
+
+
+
+
+
+
+/* Default (dark) mode styles */
+.sidebar {
+    color: #f0f0f0;
+}
+
+a {
+    color: #b0b0b0;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #ffffff;
+}
+
+.result-box {
+    background-color: #3c3c4c;
+    border: 1px solid #505060;
+    padding: 15px;
+    margin: 10px 0;
+}
+
+/* Light mode styles */
+.light-mode .sidebar {
+    color: #333333;
+}
+
+.light-mode a {
+    color: #555555;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.light-mode a:hover {
+    color: #222222;
+}
+
+.light-mode .result-box {
+    background-color: #e0e0e0;
+    border: 1px solid #c0c0c0;
+    padding: 15px;
+    margin: 10px 0;
+}
+
