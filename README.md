@@ -2,7 +2,7 @@
 A database for saving and sharing prompts for LLM's. MySQL, PHP, JavaScript, Google OAuth...
 
 # Project Overview:
-A dynamic web platform designed to serve as a repository for prompts, facilitating discussions and interactions around them. It showcases the creator's proficiency in modern web development technologies, best practices, and database management.
+A dynamic web platform designed to serve as a repository for prompts, facilitating discussions and interactions around them. It showcases the my proficiency in modern web development technologies, best practices, and database management.
 
 # Technical Highlights:
 
