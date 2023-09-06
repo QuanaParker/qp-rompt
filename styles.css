@@ -124,13 +124,11 @@ body.light-mode {
 
 .container {
     display: flex;
-    height: calc(100% - 85px); /* Adjusted for the navbar height */
     max-width: 80%;
     margin: 85px auto 0; /* 60px top margin to push content below the navbar */
 }
 .light-mode .container {
     display: flex;
-    height: calc(100% - 85px); /* Adjusted for the navbar height */
     max-width: 80%;
     margin: 85px auto 0; /* 60px top margin to push content below the navbar */
 }
